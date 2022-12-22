@@ -1,0 +1,31 @@
+﻿@*@using WebAppMVC1.ViewModels;
+
+@model CarsListViewModel*@
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2>All Cars</h2>
+    <h3>@ViewBag.Category</h3>
+    @{
+        foreach(var car in Model.allCars)
+        {
+            <div>
+                <h2>Model: @car.name</h2>
+                <p>Cost: @car.price</p>
+            </div>
+        }
+        
+
+    }
+</body>
+</html>
